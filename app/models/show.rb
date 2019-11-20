@@ -4,7 +4,10 @@ class Show < ActiveRecord::Base
   belongs_to :network
 
   def actors_list
-    
-    binding.pry
+    list = []
+    list.each{|actor|
+      << "#{self.actor.first_name} #{self.actor.last_name}"
+    }
+    list
   end
 end
